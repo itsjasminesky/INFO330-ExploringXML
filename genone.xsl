@@ -15,11 +15,11 @@
   need to write the full "apply-templates" text yourself.
   -->
 <xsl:template match="/pokedex">
-    <xsl:apply-templates select="XPATH-QUERY-GOES-HERE" />
+    <xsl:apply-templates select="pokemon[@generation='1']" />
 </xsl:template>
 
 <xsl:template match="pokemon">
-    <xsl:value-of select="XPATH-QUERY-GOES-HERE" /> (<xsl:value-of select="XPATH-QUERY-GOES-HERE" />): <xsl:value-of select="XPATH-QUERY-GOES-HERE" /> | 
+    <xsl:value-of select="./name" /> (<xsl:value-of select="@pokedexNumber" />): <xsl:value-of select="./@classification" /> | 
 </xsl:template>
 
 <!--
@@ -28,6 +28,7 @@
   Note that the HTML table expects each row to look something like
 
   Bulbasaur (1) | Seed Pokémon
+
 
   ... where the name and the parenthesized Pokedex number are in the first column.
   -->
@@ -41,7 +42,7 @@
       <th>Name (Pokedex Number)</th>
       <th>Classification</th>
     </tr>
-    <xsl:apply-templates select="XPATH-QUERY-GOES-HERE" />
+    <xsl:apply-templates select="" />
   </table>
   </body>
   </html>
@@ -49,8 +50,8 @@
 
 <xsl:template match="pokemon">
     <tr>
-      <td><xsl:value-of select="XPATH-QUERY-GOES-HERE" />(<xsl:value-of select="XPATH-QUERY-GOES-HERE" />)</td>
-      <td><xsl:value-of select="XPATH-QUERY-GOES-HERE" /></td>
+      <td><xsl:value-of select="" />(<xsl:value-of select="" />)</td>
+      <td><xsl:value-of select="" /></td>
     </tr>
 </xsl:template>
 -->
