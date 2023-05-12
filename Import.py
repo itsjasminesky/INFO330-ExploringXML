@@ -56,7 +56,8 @@ sp_attack = root.find('sp_attack').text
 sp_defense = root.find('sp_defense').text
 height = root.find('height/m').text
 weight = root.find('weight/kg').text
-abilities = [ability.text for ability in root.find('abilities').iter('ability')]
+abilities = [ability.text
+             for ability in root.find('abilities').iter('ability')]
 
 # Insert the Pokemon into the database
 cur.execute("""
