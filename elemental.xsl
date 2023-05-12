@@ -38,7 +38,7 @@
      WHERE type1 IN ('fire', 'water', 'flying', 'ground') 
         OR type2 IN ('fire', 'water', 'flying', 'ground') = 328 Pokemon -->
 <xsl:template match="/pokedex">
-  <xsl:variable name="pokemonResults" select="pokemon[type/text() = 'fire' or type/text() = 'water' or type/text() = 'flying' or type/text() = 'ground']" />
+   <xsl:variable name="pokemonResults" select="pokemon[type = 'fire' or type = 'water' or type = 'flying' or type = 'ground']" />
   <html>
   <body>
   <h2>Elemental Pokemon</h2>
