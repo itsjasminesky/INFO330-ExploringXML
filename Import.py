@@ -37,10 +37,6 @@ if len(sys.argv) < 2:
 connection = sqlite3.connect('pokemon.sqlite')
 cur = connection.cursor()
 
-
-#to open the file given as a command-line argument, use Python's XML
-# libraries to parse the XML, then INSERT the resulting data into the database
-# tavle inide the sqlite fil. 
 for i, arg in enumerate(sys.argv):
     if i == 0:
         continue 
